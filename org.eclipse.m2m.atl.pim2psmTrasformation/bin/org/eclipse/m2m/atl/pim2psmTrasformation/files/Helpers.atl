@@ -1,0 +1,145 @@
+library Helpers;
+
+helper def: getters : Bag(PSMMetamodel!CSharpPropertyGetter) = Bag{};
+helper def: setters : Bag(PSMMetamodel!CSharpPropertyGetter) = Bag{};
+
+helper context String def : toUpperFirst() : String =
+	self.toSequence().first().toUpper() + self.substring(2, self.size())
+;
+
+helper def: getHTTPVerbFromCRUDVerb(v: PIMMetamodel!CRUDVerb): PSMMetamodel!HTTPVerb =
+	if v = #CREATE 
+	then #POST
+	else 
+		if v = #READ
+		then #GET
+		else
+			if v = #UPDATE
+			then #PUT
+			else #DELETE
+			endif
+		endif
+	endif
+;
+
+helper def: getHTTPVerbFromRDBMSVerb(v: PIMMetamodel!RDBMSVerb): PSMMetamodel!HTTPVerb =
+	if v = #INSERT
+	then #POST
+	else 
+		if v = #SELECT
+		then #GET
+		else
+			if v = #UPDATE
+			then #PUT
+			else #DELETE
+			endif
+		endif
+	endif
+;
+
+helper context PIMMetamodel!ResourceControllerCRUDActivity def: ActivityIsNotGETManager : Boolean = 
+	not (self.crudVerb = #READ and self.refImmediateComposite().oclIsTypeOf(PIMMetamodel!ResourceControllerManager))
+;
+
+helper context PIMMetamodel!PIMComponentProperty def: createEntityAnnotationBasedOnColumn: String =
+	if self.isMappedToRDBMSColumn.oclIsUndefined() then
+		if self.isPrimaryIdentifier then
+			'[Key]'
+		else
+			'[NotMapped]'
+		endif
+	else
+		'[Column("' + self.isMappedToRDBMSColumn.name + '")]'
+	endif
+	;
+
+helper def: createARAnnotationFromURI(s: String): String = 
+	'[RoutePrefix("' + s.getASPUri().substring(2, s.getASPUri().size()) + '")]'
+	;
+
+helper def: createARAnnotationFromHTTPMethod(v: PIMMetamodel!RDBMSVerb): String =
+	if v = #CREATE
+	then '[HttpPost]'
+	else 
+		if v = #READ
+		then '[HttpGet]'
+		else
+			if v = #UPDATE
+			then '[HttpPut]'
+			else '[HttpDelete]'
+			endif
+		endif
+	endif
+;
+
+helper context PIMMetamodel!ResourceControllerCRUDActivity def: createARAnnotationFromType: String =
+	if self.refImmediateComposite().oclIsTypeOf(PIMMetamodel!ResourceController)
+	then
+		'[ResponseType(typeof(' + self.refImmediateComposite().hasAssociatedRModel.parentName.toUpperFirst() + '))]'
+	else
+		if self.refImmediateComposite().oclIsTypeOf(PIMMetamodel!ResourceControllerManager)
+		then
+			'[ResponseType(typeof(' + self.refImmediateComposite().hasAssociatedRMManager.hasRelatedModel.parentName.toUpperFirst() + '))]'
+		else
+			'[ResponseType(typeof(' + self.refImmediateComposite().hasAssociatedAlgoModel.name.toUpperFirst() + '))]'
+		endif
+	endif
+	
+	;
+
+helper context PIMMetamodel!ResourceControllerCRUDActivity def: getResourceId(): String =
+		self.refImmediateComposite().hasAssociatedRModel.rModelHasProperty.asSet() -> select(p | p.isPrimaryIdentifier).first().name
+;
+
+helper context PIMMetamodel!ResourceControllerCRUDActivity def: getResourceIdType(): String =
+		self.refImmediateComposite().hasAssociatedRModel.rModelHasProperty.asSet() -> select(p | p.isPrimaryIdentifier).first().type
+;
+
+helper context PIMMetamodel!ResourceControllerCRUDActivity def: getResourceParentName(): String =
+		self.refImmediateComposite().hasAssociatedRModel.parentName
+;
+
+helper context PIMMetamodel!ResourceControllerCRUDActivity def: getResourceNamefromManager(): String =
+		self.refImmediateComposite().hasAssociatedRMManager.hasRelatedModel.parentName
+;
+
+helper context String def: getASPUri() : String =
+	self	
+;
+
+helper def: getContainerParameterFromUri (uri : String): String =
+	let s : String = uri.split('/') -> select(i | i.startsWith('{')).first() in
+	s.substring(2,s.size()-1)	
+;
+
+helper def: getTargetParameterFromUri (uri : String): String =
+	let s : OrderedSet (String) = uri.split('/') -> select(i | i.startsWith('{')) in
+		if s.size() >1
+		then
+			s.at(2).substring(2,s.at(2).size()-1)
+		else
+			s.first().substring(2,s.first().size()-1)
+		endif
+			;
+
+helper def: checkIfResourceContainerParameterExists(uri : String): Boolean =
+	uri.split('/') -> select(i | i.startsWith('{')).size() > 1 	
+;
+
+helper def: checkIfManagerContainerParameterExists(uri : String): Boolean =
+	uri.split('/') -> select(i | i.startsWith('{')).size() > 0 	
+;
+
+helper context PIMMetamodel!ResourceControllerCRUDActivity def: getReturnTypeParameterForManager() : String = 
+	if self.crudVerb = #READ then
+		self.refImmediateComposite().hasAssociatedRMManager.parentName.concat('Manager').toUpperFirst()
+	else
+		self.refImmediateComposite().hasAssociatedRMManager.parentName.toUpperFirst()
+	endif
+;
+
+helper context PIMMetamodel!RDBMSTableColumn def: getReferencedModelFromFK() : PIMMetamodel!ResourceModel =	
+	PIMMetamodel!ResourceModel.allInstancesFrom('IN') -> select(m | m.isMappedToRDBMSTable = self.referencesRDBMSTable.first()).first()
+;
+
+

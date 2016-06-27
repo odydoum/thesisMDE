@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="ProjectUserFile" nsURI="org::eclipse::acceleo::psm2code::files::project::ProjectUserFile" startHeaderPosition="29" endHeaderPosition="-1">
+    <input>
+      <takesTypesFrom href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateProjectUserFile" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?>&#xA;&lt;Project ToolsVersion=&quot;14.0&quot; xmlns=&quot;http://schemas.microsoft.com/developer/msbuild/2003&quot;>&#xA;  &lt;PropertyGroup>&#xA;    &lt;UseIISExpress>true&lt;/UseIISExpress>&#xA;  &lt;/PropertyGroup>&#xA;  &lt;ProjectExtensions>&#xA;    &lt;VisualStudio>&#xA;      &lt;FlavorProperties GUID=&quot;{349c5851-65df-11da-9384-00065b846f21}&quot;>&#xA;        &lt;WebProjectProperties>&#xA;          &lt;StartPageUrl>&#xA;          &lt;/StartPageUrl>&#xA;          &lt;StartAction>CurrentPage&lt;/StartAction>&#xA;          &lt;AspNetDebugging>True&lt;/AspNetDebugging>&#xA;          &lt;SilverlightDebugging>False&lt;/SilverlightDebugging>&#xA;          &lt;NativeDebugging>False&lt;/NativeDebugging>&#xA;          &lt;SQLDebugging>False&lt;/SQLDebugging>&#xA;          &lt;ExternalProgram>&#xA;          &lt;/ExternalProgram>&#xA;          &lt;StartExternalURL>&#xA;          &lt;/StartExternalURL>&#xA;          &lt;StartCmdLineArguments>&#xA;          &lt;/StartCmdLineArguments>&#xA;          &lt;StartWorkingDirectory>&#xA;          &lt;/StartWorkingDirectory>&#xA;          &lt;EnableENC>True&lt;/EnableENC>&#xA;          &lt;AlwaysStartWebServerOnDebug>True&lt;/AlwaysStartWebServerOnDebug>&#xA;        &lt;/WebProjectProperties>&#xA;      &lt;/FlavorProperties>&#xA;    &lt;/VisualStudio>&#xA;  &lt;/ProjectExtensions>&#xA;&lt;/Project>&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/+">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/+">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/+">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/+">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/+">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="aRESTfulServicePSM" referredVariable="/0/generateProjectUserFile/aRESTfulServicePSM">
+                      <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM/name"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  </argument>
+                </source>
+                <argument xsi:type="ocl.ecore:PropertyCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="aRESTfulServicePSM" referredVariable="/0/generateProjectUserFile/aRESTfulServicePSM">
+                    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM/name"/>
+                </argument>
+              </source>
+              <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              </argument>
+            </source>
+            <argument xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aRESTfulServicePSM" referredVariable="/0/generateProjectUserFile/aRESTfulServicePSM">
+                <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM/name"/>
+            </argument>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".csproj.user">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="aRESTfulServicePSM">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+      <eOperations name="+">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="other">
+          <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateProjectUserFile">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateProjectUserFile"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aRESTfulServicePSM">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ServicePSM_RESTfulServicePSM_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateProjectUserFile">
+      <details key="start" value="123"/>
+      <details key="end" value="1479"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateProjectUserFile/%">
+      <details key="start" value="205"/>
+      <details key="end" value="206"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateProjectUserFile/%.1">
+      <details key="start" value="206"/>
+      <details key="end" value="1467"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateProjectUserFile/%.1/%">
+      <details key="start" value="326"/>
+      <details key="end" value="1460"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateProjectUserFile/%.1/%.1">
+      <details key="start" value="213"/>
+      <details key="end" value="307"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateProjectUserFile/%.1/%.1/%">
+      <details key="start" value="213"/>
+      <details key="end" value="292"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateProjectUserFile/%.1/%.1/%/%">
+      <details key="start" value="213"/>
+      <details key="end" value="268"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateProjectUserFile/%.1/%.1/%/%/%">
+      <details key="start" value="213"/>
+      <details key="end" value="264"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateProjectUserFile/%.1/%.1/%/%/%/%">
+      <details key="start" value="213"/>
+      <details key="end" value="240"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateProjectUserFile/%.1/%.1/%/%/%/%/%">
+      <details key="start" value="213"/>
+      <details key="end" value="236"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateProjectUserFile/%.1/%.1/%/%/%/%/%/aRESTfulServicePSM">
+      <details key="start" value="213"/>
+      <details key="end" value="231"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateProjectUserFile/%.1/%.1/%/%/%/%/%.1">
+      <details key="start" value="237"/>
+      <details key="end" value="240"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateProjectUserFile/%.1/%.1/%/%/%/%.1">
+      <details key="start" value="241"/>
+      <details key="end" value="264"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateProjectUserFile/%.1/%.1/%/%/%/%.1/aRESTfulServicePSM">
+      <details key="start" value="241"/>
+      <details key="end" value="259"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateProjectUserFile/%.1/%.1/%/%/%.1">
+      <details key="start" value="265"/>
+      <details key="end" value="268"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateProjectUserFile/%.1/%.1/%/%.1">
+      <details key="start" value="269"/>
+      <details key="end" value="292"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateProjectUserFile/%.1/%.1/%/%.1/aRESTfulServicePSM">
+      <details key="start" value="269"/>
+      <details key="end" value="287"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateProjectUserFile/%.1/%.1/%.1">
+      <details key="start" value="293"/>
+      <details key="end" value="307"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateProjectUserFile/%.1/%.2">
+      <details key="start" value="316"/>
+      <details key="end" value="323"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateProjectUserFile/aRESTfulServicePSM">
+      <details key="start" value="164"/>
+      <details key="end" value="202"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.scase.PSMMetamodel/src" modelPluginID="org.eclipse.scase.PSMMetamodel"
+    modelName="PSM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>PSM.ecore</foreignModel>
+  <genPackages prefix="PSM" disposableProviderFactory="true" fileExtensions="psm"
+      ecorePackage="PSM.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PSM.ecore#//LinkType">
+      <genEnumLiterals ecoreEnumLiteral="PSM.ecore#//LinkType/Parent"/>
+      <genEnumLiterals ecoreEnumLiteral="PSM.ecore#//LinkType/Sibling"/>
+      <genEnumLiterals ecoreEnumLiteral="PSM.ecore#//LinkType/Child"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PSM.ecore#//HTTPVerb">
+      <genEnumLiterals ecoreEnumLiteral="PSM.ecore#//HTTPVerb/GET"/>
+      <genEnumLiterals ecoreEnumLiteral="PSM.ecore#//HTTPVerb/PUT"/>
+      <genEnumLiterals ecoreEnumLiteral="PSM.ecore#//HTTPVerb/POST"/>
+      <genEnumLiterals ecoreEnumLiteral="PSM.ecore#//HTTPVerb/DELETE"/>
+    </genEnums>
+    <genClasses ecoreClass="PSM.ecore#//RESTfulServicePSM">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//RESTfulServicePSM/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//RESTfulServicePSM/hasCSharpRModel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//RESTfulServicePSM/hasCSharpRMManager"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//RESTfulServicePSM/hasCSharpRMController"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//RESTfulServicePSM/hasCSharpRController"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//RESTfulServicePSM/hasEntityDatabaseController"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//RESTfulServicePSM/hasCSharpAlgoRController"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//RESTfulServicePSM/hasCSharpAlgoResourceModel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//RESTfulServicePSM/serviceOutputPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//RESTfulServicePSM/serviceDatabaseIP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//RESTfulServicePSM/serviceDatabasePort"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//RESTfulServicePSM/serviceDatabaseUsername"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//RESTfulServicePSM/serviceDatabasePassword"/>
+    </genClasses>
+    <genClasses ecoreClass="PSM.ecore#//CSharpResourceModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//CSharpResourceModel/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpResourceModel/hasRelatedCSharpRMManager"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpResourceModel/CSharpRModelHasProperty"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpResourceModel/CSharpRModelHasDataAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpResourceModel/CSharpRModelHasEntityAnnotation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//CSharpResourceModel/parentName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpResourceModel/CSharpRModelHasGetter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpResourceModel/CSharpRModelHasSetter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpResourceModel/hasRelatedCSharpAlgoModel"/>
+    </genClasses>
+    <genClasses ecoreClass="PSM.ecore#//CSharpResourceModelManager">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//CSharpResourceModelManager/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpResourceModelManager/hasRelatedCSharpRModel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpResourceModelManager/CSharpRMManagerHasProperty"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpResourceModelManager/CSharpRMManagerHasDataAnnotation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//CSharpResourceModelManager/parentName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpResourceModelManager/CSharpRMManagerHasGetter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpResourceModelManager/CSharpRMManagerHasSetter"/>
+    </genClasses>
+    <genClasses ecoreClass="PSM.ecore#//PSMComponentProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//PSMComponentProperty/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//PSMComponentProperty/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//PSMComponentProperty/bIsUnique"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//PSMComponentProperty/bIsPrimaryIdentifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//PSMComponentProperty/PropertyHasDataAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//PSMComponentProperty/PropertyHasEntityAnnotation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//PSMComponentProperty/correspondingField"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//PSMComponentProperty/bIsForeignKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//PSMComponentProperty/bIsNavigationProperty"/>
+    </genClasses>
+    <genClasses ecoreClass="PSM.ecore#//EntityAnnotation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//EntityAnnotation/EntityAnnotationText"/>
+    </genClasses>
+    <genClasses ecoreClass="PSM.ecore#//DataContractAnnotation">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//DataContractAnnotation/dataContractAnnotationText"/>
+    </genClasses>
+    <genClasses ecoreClass="PSM.ecore#//FunctionParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//FunctionParameter/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//FunctionParameter/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//FunctionParameter/bIsUnique"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//FunctionParameter/bIsReturnParameter"/>
+    </genClasses>
+    <genClasses ecoreClass="PSM.ecore#//CSharpResourceController">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//CSharpResourceController/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//CSharpResourceController/controllerURI"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpResourceController/hasAssociatedCSharpRModel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpResourceController/CSharpRControllerHasARAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpResourceController/CSharpRControllerHasAction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//CSharpResourceController/parentName"/>
+    </genClasses>
+    <genClasses ecoreClass="PSM.ecore#//CSharpResourceManagerController">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//CSharpResourceManagerController/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//CSharpResourceManagerController/controllerURI"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpResourceManagerController/hasAssociatedCSharpRMManager"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpResourceManagerController/CSharpRMControllerHasARAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpResourceManagerController/CSharpRMControllerHasAction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//CSharpResourceManagerController/parentName"/>
+    </genClasses>
+    <genClasses ecoreClass="PSM.ecore#//HTTPAction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//HTTPAction/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//HTTPAction/ActionHTTPVerb"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//HTTPAction/HTTPActionURI"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//HTTPAction/HTTPActionHasARAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//HTTPAction/HTTPActionHasParameter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//HTTPAction/hasHTTPActionHandler"/>
+    </genClasses>
+    <genClasses ecoreClass="PSM.ecore#//AttributeRoutingAnnotation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//AttributeRoutingAnnotation/AttributeRoutingAnnotationText"/>
+    </genClasses>
+    <genClasses ecoreClass="PSM.ecore#//HTTPActionHandler">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//HTTPActionHandler/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//HTTPActionHandler/HandlerHTTPVerb"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PSM.ecore#//HTTPActionHandler/usesEntityActivity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//HTTPActionHandler/hasHypermediaFunction"/>
+    </genClasses>
+    <genClasses ecoreClass="PSM.ecore#//EntityActivity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//EntityActivity/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//EntityActivity/EntityActivityHTTPVerb"/>
+    </genClasses>
+    <genClasses ecoreClass="PSM.ecore#//EntityDatabaseController">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//EntityDatabaseController/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//EntityDatabaseController/hasEntityActivity"/>
+    </genClasses>
+    <genClasses ecoreClass="PSM.ecore#//CreateHypermediaFunction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//CreateHypermediaFunction/hasPSMHypermediaLink"/>
+    </genClasses>
+    <genClasses ecoreClass="PSM.ecore#//PSMHypermediaLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//PSMHypermediaLink/linkHTTPVerb"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//PSMHypermediaLink/linkType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PSM.ecore#//PSMHypermediaLink/hasTargetCSharpRController"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PSM.ecore#//PSMHypermediaLink/hasTargetCSharpRMController"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PSM.ecore#//PSMHypermediaLink/hasTargetCSharpAlgoRController"/>
+    </genClasses>
+    <genClasses ecoreClass="PSM.ecore#//CSharpAlgoResourceModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpAlgoResourceModel/CSharpAlgoModelHasProperty"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//CSharpAlgoResourceModel/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//CSharpAlgoResourceModel/parentName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpAlgoResourceModel/CSharpAlgoModelHasGetter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpAlgoResourceModel/CSharpAlgoModelHasSetter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpAlgoResourceModel/CSharpAlgoRModelHasDataContractAnnotation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpAlgoResourceModel/hasRelatedCSharpAlgoModel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpAlgoResourceModel/isRelatedCSharpAlgoModel"/>
+    </genClasses>
+    <genClasses ecoreClass="PSM.ecore#//CSharpAlgoResourceController">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpAlgoResourceController/hasAssociatedCSharpAlgoModel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpAlgoResourceController/CSharpAlgoRChasHTTPAction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//CSharpAlgoResourceController/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//CSharpAlgoResourceController/parentName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpAlgoResourceController/CSharpAlgoRControllerHasARAnnotation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PSM.ecore#//CSharpAlgoResourceController/controllerURI"/>
+    </genClasses>
+    <genClasses ecoreClass="PSM.ecore#//CSharpPropertySetter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpPropertySetter/setsProperty"/>
+    </genClasses>
+    <genClasses ecoreClass="PSM.ecore#//CSharpPropertyGetter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PSM.ecore#//CSharpPropertyGetter/getsProperty"/>
+    </genClasses>
+    <genClasses ecoreClass="PSM.ecore#//CSharpPropertyAccessor"/>
+  </genPackages>
+</genmodel:GenModel>

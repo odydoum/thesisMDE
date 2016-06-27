@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="DoxyPropertiesHelpers" nsURI="org::eclipse::acceleo::psm2code::utilities::DoxyPropertiesHelpers" startHeaderPosition="29" endHeaderPosition="243">
+    <input>
+      <takesTypesFrom href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="genPropDocumentation" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/** &#xA;&#x9;@brief&#x9;&#x9;"/>
+      <body xsi:type="ocl.ecore:VariableExp" name="brief" referredVariable="/0/genPropDocumentation/brief.1">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;&#x9;@details&#x9;"/>
+      <body xsi:type="ocl.ecore:VariableExp" name="details" referredVariable="/0/genPropDocumentation/details.1">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;*/"/>
+      <parameter name="anOclAny">
+        <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </parameter>
+      <parameter name="brief">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </parameter>
+      <parameter name="details">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="Pbrief" visibility="Public">
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="The Primary Key of the table corresponding to this class(resource)."/>
+        <ifExpr xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/Pbrief/p">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty/bIsPrimaryIdentifier"/>
+        </ifExpr>
+        <elseIf>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="A list containing Hypermedia links."/>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/Pbrief/p">
+                <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty/type"/>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="HypermediaLink">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/="/>
+          </ifExpr>
+        </elseIf>
+        <elseIf>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Navigation property modeling a one-to-many relationship."/>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/startsWith">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/Pbrief/p">
+                <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty/name"/>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="setOf">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </ifExpr>
+        </elseIf>
+        <elseIf>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Navigation property modeling a many-to-one relationship."/>
+          <ifExpr xsi:type="ocl.ecore:IteratorExp" name="one">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:OperationCallExp" eType="/16/Sequence(CSharpResourceModel)" referredOperation="/1/ecore_EObject_Class/siblings">
+              <source xsi:type="ocl.ecore:VariableExp" name="model" referredVariable="/0/Pbrief/model">
+                <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+              </source>
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/15/CSharpResourceModel">
+                <referredType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+              </argument>
+            </source>
+            <body xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/Pbrief/%/%.4/one/m">
+                  <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel/name"/>
+              </source>
+              <argument xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/Pbrief/p">
+                  <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty/type"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/="/>
+            </body>
+            <iterator xsi:type="ocl.ecore:Variable" name="m">
+              <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+            </iterator>
+          </ifExpr>
+        </elseIf>
+        <elseIf>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="A foreign key property."/>
+          <ifExpr xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/Pbrief/p">
+              <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty/bIsForeignKey"/>
+          </ifExpr>
+        </elseIf>
+      </body>
+      <parameter name="p">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+      </parameter>
+      <parameter name="model">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="Pdetails" visibility="Public">
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Each link points to an api controller. Furthermore, each link represents one of the &#xA;&#x9;&#x9;possible actions that can be performed while accessing this specific resource."/>
+        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/Pdetails/p">
+              <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty/type"/>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="HypermediaLink">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/="/>
+        </ifExpr>
+        <elseIf>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="This navigation property is a collection that contains all related "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/Pdetails/p">
+              <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty/type"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" resources to this specific resource."/>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/startsWith">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/Pdetails/p">
+                <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty/name"/>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="setOf">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </ifExpr>
+        </elseIf>
+        <elseIf>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="This Navifation property holds the parent "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/Pdetails/p">
+              <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty/type"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" related resource. Although the foreign key property is sufficient to model&#xA;&#x9;&#x9;this relationship, it is adviced by EF to have both the FK and the navigation property, for better support and flexibility."/>
+          <ifExpr xsi:type="ocl.ecore:IteratorExp" name="one">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:OperationCallExp" eType="/16/Sequence(CSharpResourceModel)" referredOperation="/1/ecore_EObject_Class/siblings">
+              <source xsi:type="ocl.ecore:VariableExp" name="model" referredVariable="/0/Pdetails/model">
+                <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+              </source>
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/15/CSharpResourceModel">
+                <referredType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+              </argument>
+            </source>
+            <body xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/Pdetails/%/%.3/one/m">
+                  <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel/name"/>
+              </source>
+              <argument xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/Pdetails/p">
+                  <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty/type"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/="/>
+            </body>
+            <iterator xsi:type="ocl.ecore:Variable" name="m">
+              <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+            </iterator>
+          </ifExpr>
+        </elseIf>
+      </body>
+      <parameter name="p">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+      </parameter>
+      <parameter name="model">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Comment">
+      <body startPosition="1608" endPosition="1637" value=" ----------------------------"/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="Pbrief" visibility="Public">
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="A list containing Hypermedia links."/>
+        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/Pbrief.1/p">
+              <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty/type"/>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="HypermediaLink">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/="/>
+        </ifExpr>
+      </body>
+      <parameter name="p">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="Pdetails" visibility="Public">
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Each link points to an api controller. Furthermore, each link represents one of the &#xA;possible actions that can be performed while accessing this specific resource."/>
+        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/Pdetails.1/p">
+              <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty/type"/>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="HypermediaLink">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/="/>
+        </ifExpr>
+      </body>
+      <parameter name="p">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+      <eOperations name="startsWith">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <eParameters name="substring">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="siblings">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:SequenceType" href="http://www.eclipse.org/acceleo/mtl/3.0/mtlnonstdlib.ecore#//Sequence(OclAny)"/>
+        <eParameters name="filter">
+          <eType xsi:type="ocl.ecore:TypeType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclType"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="genPropDocumentation">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/genPropDocumentation"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="anOclAny">
+          <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+        </eParameters>
+        <eParameters name="brief">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+        <eParameters name="details">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="Pbrief">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/Pbrief"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="p">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+        </eParameters>
+        <eParameters name="model">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="Pdetails">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/Pdetails"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="p">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+        </eParameters>
+        <eParameters name="model">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="Pbrief">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/Pbrief.1"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="p">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="Pdetails">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/Pdetails.1"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="p">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ServicePSM_PSMComponentProperty_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="CSharpResourceModel">
+      <referredType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(OclAny)" instanceClassName="java.util.List">
+      <elementType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(CSharpResourceModel)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//PSMComponentProperty"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/genPropDocumentation">
+      <details key="start" value="129"/>
+      <details key="end" value="282"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/genPropDocumentation/%">
+      <details key="start" value="223"/>
+      <details key="end" value="237"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/genPropDocumentation/brief">
+      <details key="start" value="238"/>
+      <details key="end" value="243"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/genPropDocumentation/%.1">
+      <details key="start" value="245"/>
+      <details key="end" value="257"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/genPropDocumentation/details">
+      <details key="start" value="258"/>
+      <details key="end" value="265"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/genPropDocumentation/%.2">
+      <details key="start" value="267"/>
+      <details key="end" value="270"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/genPropDocumentation/anOclAny">
+      <details key="start" value="167"/>
+      <details key="end" value="184"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/genPropDocumentation/brief.1">
+      <details key="start" value="187"/>
+      <details key="end" value="201"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/genPropDocumentation/details.1">
+      <details key="start" value="204"/>
+      <details key="end" value="220"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/Pbrief">
+      <details key="start" value="284"/>
+      <details key="end" value="824"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/Pbrief/%">
+      <details key="start" value="365"/>
+      <details key="end" value="812"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/Pbrief/%/%">
+      <details key="start" value="395"/>
+      <details key="end" value="462"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/Pbrief/%/%.1">
+      <details key="start" value="369"/>
+      <details key="end" value="393"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/Pbrief/%/%.1/p">
+      <details key="start" value="370"/>
+      <details key="end" value="371"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/Pbrief/%/%.2">
+      <details key="start" value="462"/>
+      <details key="end" value="533"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/Pbrief/%/%.2/%">
+      <details key="start" value="498"/>
+      <details key="end" value="533"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/Pbrief/%/%.2/%.1">
+      <details key="start" value="469"/>
+      <details key="end" value="496"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/Pbrief/%/%.2/%.1/%">
+      <details key="start" value="470"/>
+      <details key="end" value="476"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/Pbrief/%/%.2/%.1/%/p">
+      <details key="start" value="470"/>
+      <details key="end" value="471"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/Pbrief/%/%.2/%.1/%.1">
+      <details key="start" value="479"/>
+      <details key="end" value="495"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/Pbrief/%/%.3">
+      <details key="start" value="533"/>
+      <details key="end" value="626"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/Pbrief/%/%.3/%">
+      <details key="start" value="570"/>
+      <details key="end" value="626"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/Pbrief/%/%.3/%.1">
+      <details key="start" value="540"/>
+      <details key="end" value="568"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/Pbrief/%/%.3/%.1/%">
+      <details key="start" value="541"/>
+      <details key="end" value="547"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/Pbrief/%/%.3/%.1/%/p">
+      <details key="start" value="541"/>
+      <details key="end" value="542"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/Pbrief/%/%.3/%.1/%.1">
+      <details key="start" value="559"/>
+      <details key="end" value="566"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/Pbrief/%/%.4">
+      <details key="start" value="626"/>
+      <details key="end" value="757"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/Pbrief/%/%.4/%">
+      <details key="start" value="701"/>
+      <details key="end" value="757"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/Pbrief/%/%.4/one">
+      <details key="start" value="634"/>
+      <details key="end" value="699"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/Pbrief/%/%.4/one/%">
+      <details key="start" value="635"/>
+      <details key="end" value="670"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/Pbrief/%/%.4/one/%/model">
+      <details key="start" value="635"/>
+      <details key="end" value="640"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/Pbrief/%/%.4/one/%/%">
+      <details key="start" value="650"/>
+      <details key="end" value="669"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/Pbrief/%/%.4/one/%.1">
+      <details key="start" value="682"/>
+      <details key="end" value="697"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/Pbrief/%/%.4/one/%.1/%">
+      <details key="start" value="682"/>
+      <details key="end" value="688"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/Pbrief/%/%.4/one/%.1/%/m">
+      <details key="start" value="682"/>
+      <details key="end" value="683"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/Pbrief/%/%.4/one/%.1/%.1">
+      <details key="start" value="691"/>
+      <details key="end" value="697"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/Pbrief/%/%.4/one/%.1/%.1/p">
+      <details key="start" value="691"/>
+      <details key="end" value="692"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/Pbrief/%/%.4/one/m">
+      <details key="start" value="678"/>
+      <details key="end" value="679"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/Pbrief/%/%.5">
+      <details key="start" value="757"/>
+      <details key="end" value="807"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/Pbrief/%/%.5/%">
+      <details key="start" value="784"/>
+      <details key="end" value="807"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/Pbrief/%/%.5/%.1">
+      <details key="start" value="765"/>
+      <details key="end" value="782"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/Pbrief/%/%.5/%.1/p">
+      <details key="start" value="766"/>
+      <details key="end" value="767"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/Pbrief/p">
+      <details key="start" value="308"/>
+      <details key="end" value="332"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/Pbrief/model">
+      <details key="start" value="335"/>
+      <details key="end" value="362"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/Pdetails">
+      <details key="start" value="826"/>
+      <details key="end" value="1598"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/Pdetails/%">
+      <details key="start" value="909"/>
+      <details key="end" value="1586"/>
+      <details key="line" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/Pdetails/%/%">
+      <details key="start" value="940"/>
+      <details key="end" value="1105"/>
+      <details key="line" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/Pdetails/%/%.1">
+      <details key="start" value="912"/>
+      <details key="end" value="939"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/Pdetails/%/%.1/%">
+      <details key="start" value="913"/>
+      <details key="end" value="919"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/Pdetails/%/%.1/%/p">
+      <details key="start" value="913"/>
+      <details key="end" value="914"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/Pdetails/%/%.1/%.1">
+      <details key="start" value="922"/>
+      <details key="end" value="938"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/Pdetails/%/%.2">
+      <details key="start" value="1105"/>
+      <details key="end" value="1255"/>
+      <details key="line" value="24"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/Pdetails/%/%.2/%">
+      <details key="start" value="1142"/>
+      <details key="end" value="1209"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/Pdetails/%/%.2/%.1">
+      <details key="start" value="1210"/>
+      <details key="end" value="1216"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/Pdetails/%/%.2/%.1/p">
+      <details key="start" value="1210"/>
+      <details key="end" value="1211"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/Pdetails/%/%.2/%.2">
+      <details key="start" value="1218"/>
+      <details key="end" value="1255"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/Pdetails/%/%.2/%.3">
+      <details key="start" value="1112"/>
+      <details key="end" value="1140"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/Pdetails/%/%.2/%.3/%">
+      <details key="start" value="1113"/>
+      <details key="end" value="1119"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/Pdetails/%/%.2/%.3/%/p">
+      <details key="start" value="1113"/>
+      <details key="end" value="1114"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/Pdetails/%/%.2/%.3/%.1">
+      <details key="start" value="1131"/>
+      <details key="end" value="1138"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/Pdetails/%/%.3">
+      <details key="start" value="1255"/>
+      <details key="end" value="1581"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/Pdetails/%/%.3/%">
+      <details key="start" value="1329"/>
+      <details key="end" value="1371"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/Pdetails/%/%.3/%.1">
+      <details key="start" value="1372"/>
+      <details key="end" value="1378"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/Pdetails/%/%.3/%.1/p">
+      <details key="start" value="1372"/>
+      <details key="end" value="1373"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/Pdetails/%/%.3/%.2">
+      <details key="start" value="1380"/>
+      <details key="end" value="1581"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/Pdetails/%/%.3/one">
+      <details key="start" value="1262"/>
+      <details key="end" value="1327"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/Pdetails/%/%.3/one/%">
+      <details key="start" value="1263"/>
+      <details key="end" value="1298"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/Pdetails/%/%.3/one/%/model">
+      <details key="start" value="1263"/>
+      <details key="end" value="1268"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/Pdetails/%/%.3/one/%/%">
+      <details key="start" value="1278"/>
+      <details key="end" value="1297"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/Pdetails/%/%.3/one/%.1">
+      <details key="start" value="1310"/>
+      <details key="end" value="1325"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/Pdetails/%/%.3/one/%.1/%">
+      <details key="start" value="1310"/>
+      <details key="end" value="1316"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/Pdetails/%/%.3/one/%.1/%/m">
+      <details key="start" value="1310"/>
+      <details key="end" value="1311"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/Pdetails/%/%.3/one/%.1/%.1">
+      <details key="start" value="1319"/>
+      <details key="end" value="1325"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/Pdetails/%/%.3/one/%.1/%.1/p">
+      <details key="start" value="1319"/>
+      <details key="end" value="1320"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/Pdetails/%/%.3/one/m">
+      <details key="start" value="1306"/>
+      <details key="end" value="1307"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/Pdetails/p">
+      <details key="start" value="852"/>
+      <details key="end" value="876"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/Pdetails/model">
+      <details key="start" value="879"/>
+      <details key="end" value="906"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/%">
+      <details key="start" value="1600"/>
+      <details key="end" value="1639"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/Pbrief.1">
+      <details key="start" value="1640"/>
+      <details key="end" value="1776"/>
+      <details key="line" value="31"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/Pbrief.1/%">
+      <details key="start" value="1691"/>
+      <details key="end" value="1764"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/Pbrief.1/%/%">
+      <details key="start" value="1724"/>
+      <details key="end" value="1759"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/Pbrief.1/%/%.1">
+      <details key="start" value="1695"/>
+      <details key="end" value="1722"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.82" references="/0/Pbrief.1/%/%.1/%">
+      <details key="start" value="1696"/>
+      <details key="end" value="1702"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.83" references="/0/Pbrief.1/%/%.1/%/p">
+      <details key="start" value="1696"/>
+      <details key="end" value="1697"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.84" references="/0/Pbrief.1/%/%.1/%.1">
+      <details key="start" value="1705"/>
+      <details key="end" value="1721"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.85" references="/0/Pbrief.1/p">
+      <details key="start" value="1664"/>
+      <details key="end" value="1688"/>
+      <details key="line" value="31"/>
+    </eAnnotations>
+    <eAnnotations source="positions.86" references="/0/Pdetails.1">
+      <details key="start" value="1778"/>
+      <details key="end" value="2044"/>
+      <details key="line" value="36"/>
+    </eAnnotations>
+    <eAnnotations source="positions.87" references="/0/Pdetails.1/%">
+      <details key="start" value="1831"/>
+      <details key="end" value="2032"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.88" references="/0/Pdetails.1/%/%">
+      <details key="start" value="1864"/>
+      <details key="end" value="2027"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+    <eAnnotations source="positions.89" references="/0/Pdetails.1/%/%.1">
+      <details key="start" value="1835"/>
+      <details key="end" value="1862"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.90" references="/0/Pdetails.1/%/%.1/%">
+      <details key="start" value="1836"/>
+      <details key="end" value="1842"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/Pdetails.1/%/%.1/%/p">
+      <details key="start" value="1836"/>
+      <details key="end" value="1837"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.92" references="/0/Pdetails.1/%/%.1/%.1">
+      <details key="start" value="1845"/>
+      <details key="end" value="1861"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.93" references="/0/Pdetails.1/p">
+      <details key="start" value="1804"/>
+      <details key="end" value="1828"/>
+      <details key="line" value="36"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

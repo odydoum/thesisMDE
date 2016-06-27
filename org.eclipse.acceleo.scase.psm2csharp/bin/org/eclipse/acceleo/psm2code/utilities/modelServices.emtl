@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="Cp1253"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="modelServices" nsURI="org::eclipse::acceleo::psm2code::utilities::modelServices" startHeaderPosition="30" endHeaderPosition="118">
+    <input>
+      <takesTypesFrom href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Query" name="getModelDeletePaths" visibility="Public" type="/3/Sequence(Sequence(CSharpResourceModel))">
+      <parameter name="arg0">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+      </parameter>
+      <parameter name="arg1">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_OclAny_Class/invoke">
+        <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/5">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+        </source>
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="org.eclipse.acceleo.psm2code.utilities.ModelServices">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="getModelDeletePaths(PSM.CSharpResourceModel , PSM.RESTfulServicePSM)">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:CollectionLiteralExp" eType="/3/Sequence(OclAny)" kind="Sequence">
+          <part xsi:type="ocl.ecore:CollectionItem">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+            <item xsi:type="ocl.ecore:VariableExp" name="arg0" referredVariable="/0/getModelDeletePaths/arg0">
+              <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+            </item>
+          </part>
+          <part xsi:type="ocl.ecore:CollectionItem">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+            <item xsi:type="ocl.ecore:VariableExp" name="arg1" referredVariable="/0/getModelDeletePaths/arg1">
+              <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+            </item>
+          </part>
+        </argument>
+      </expression>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="getRandomGUID" visibility="Public">
+      <parameter name="aRESTfulServicePSM">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_OclAny_Class/invoke">
+        <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/8">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+        </source>
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="org.eclipse.acceleo.psm2code.utilities.ModelServices">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="getRandomGUID()">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+        <argument xsi:type="ocl.ecore:CollectionLiteralExp" eType="/3/Sequence(OclVoid)" kind="Sequence"/>
+      </expression>
+      <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="getModelDeletePaths" eType="/3/Sequence(Sequence(CSharpResourceModel))">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getModelDeletePaths"/>
+        <eParameters name="arg0">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+        </eParameters>
+        <eParameters name="arg1">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getRandomGUID">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getRandomGUID"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aRESTfulServicePSM">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+      <eOperations name="invoke">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+        <eParameters name="class">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+        <eParameters name="method">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+        <eParameters name="arguments">
+          <eType xsi:type="ocl.ecore:SequenceType" href="http://www.eclipse.org/acceleo/mtl/3.0/mtlnonstdlib.ecore#//Sequence(OclAny)"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ServicePSM_CSharpResourceModel_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ServicePSM_RESTfulServicePSM_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(CSharpResourceModel)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Sequence(CSharpResourceModel))" instanceClassName="java.util.List" elementType="/3/Sequence(CSharpResourceModel)"/>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(OclAny)" instanceClassName="java.util.List">
+      <elementType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(OclVoid)" instanceClassName="java.util.List">
+      <elementType xsi:type="ocl.ecore:VoidType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclVoid"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/getModelDeletePaths">
+      <details key="start" value="122"/>
+      <details key="end" value="416"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/getModelDeletePaths/arg0">
+      <details key="start" value="156"/>
+      <details key="end" value="182"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/getModelDeletePaths/arg1">
+      <details key="start" value="185"/>
+      <details key="end" value="209"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/getModelDeletePaths/%">
+      <details key="start" value="256"/>
+      <details key="end" value="413"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/getModelDeletePaths/%/self">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/getModelDeletePaths/%/%">
+      <details key="start" value="263"/>
+      <details key="end" value="317"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/getModelDeletePaths/%/%.1">
+      <details key="start" value="319"/>
+      <details key="end" value="389"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/getModelDeletePaths/%/%.2">
+      <details key="start" value="391"/>
+      <details key="end" value="412"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/getModelDeletePaths/%/%.2/%/arg0">
+      <details key="start" value="400"/>
+      <details key="end" value="404"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/getModelDeletePaths/%/%.2/%.1/arg1">
+      <details key="start" value="407"/>
+      <details key="end" value="411"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/getRandomGUID">
+      <details key="start" value="418"/>
+      <details key="end" value="594"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/getRandomGUID/aRESTfulServicePSM">
+      <details key="start" value="446"/>
+      <details key="end" value="484"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/getRandomGUID/%">
+      <details key="start" value="498"/>
+      <details key="end" value="591"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/getRandomGUID/%/self">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/getRandomGUID/%/%">
+      <details key="start" value="505"/>
+      <details key="end" value="559"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/getRandomGUID/%/%.1">
+      <details key="start" value="561"/>
+      <details key="end" value="578"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/getRandomGUID/%/%.2">
+      <details key="start" value="580"/>
+      <details key="end" value="590"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

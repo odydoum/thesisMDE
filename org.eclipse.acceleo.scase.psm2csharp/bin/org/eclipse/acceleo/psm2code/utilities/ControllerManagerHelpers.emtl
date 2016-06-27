@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="ControllerManagerHelpers" nsURI="org::eclipse::acceleo::psm2code::utilities::ControllerManagerHelpers" startHeaderPosition="29" endHeaderPosition="315">
+    <input>
+      <takesTypesFrom href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="genManagerControllerFileName" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;"/>
+      <body xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/3/Sequence(String)">
+        <source xsi:type="ocl.ecore:OperationCallExp" eType="/3/Sequence(RESTfulServicePSM)" referredOperation="/1/ecore_EObject_Class/ancestors">
+          <source xsi:type="ocl.ecore:VariableExp" name="aCSharpResourceManagerController" referredVariable="/0/genManagerControllerFileName/aCSharpResourceManagerController">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceManagerController"/>
+          </source>
+          <argument xsi:type="ocl.ecore:TypeExp" eType="/7/RESTfulServicePSM">
+            <referredType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+          </argument>
+        </source>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/genManagerControllerFileName/collect/temp1">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM/name"/>
+        </body>
+        <iterator xsi:type="ocl.ecore:Variable" name="temp1">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+        </iterator>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/"/>
+      <body xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/3/Sequence(String)">
+        <source xsi:type="ocl.ecore:OperationCallExp" eType="/3/Sequence(RESTfulServicePSM)" referredOperation="/1/ecore_EObject_Class/ancestors">
+          <source xsi:type="ocl.ecore:VariableExp" name="aCSharpResourceManagerController" referredVariable="/0/genManagerControllerFileName/aCSharpResourceManagerController">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceManagerController"/>
+          </source>
+          <argument xsi:type="ocl.ecore:TypeExp" eType="/7/RESTfulServicePSM">
+            <referredType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+          </argument>
+        </source>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/genManagerControllerFileName/collect.1/temp2">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM/name"/>
+        </body>
+        <iterator xsi:type="ocl.ecore:Variable" name="temp2">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+        </iterator>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/Controllers/"/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModelManager"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aCSharpResourceManagerController" referredVariable="/0/genManagerControllerFileName/aCSharpResourceManagerController">
+              <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceManagerController"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceManagerController/hasAssociatedCSharpRMManager"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModelManager/hasRelatedCSharpRModel"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceModel/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/"/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="aCSharpResourceManagerController" referredVariable="/0/genManagerControllerFileName/aCSharpResourceManagerController">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceManagerController"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceManagerController/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".cs"/>
+      <parameter name="aCSharpResourceManagerController">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceManagerController"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="genActionParameters" visibility="Public">
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aFunctionParameter" referredVariable="/0/genActionParameters/%/aFunctionParameter">
+              <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter/type"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aFunctionParameter" referredVariable="/0/genActionParameters/%/aFunctionParameter">
+              <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter/name"/>
+          </body>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aFunctionParameter" referredVariable="/0/genActionParameters/%/aFunctionParameter">
+                <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter/bIsReturnParameter"/>
+            </source>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+          </ifExpr>
+        </body>
+        <loopVariable name="aFunctionParameter">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+        </loopVariable>
+        <iterSet xsi:type="mtl:QueryInvocation" eType="/3/Sequence(FunctionParameter)" definition="/0/getParameters">
+          <argument xsi:type="ocl.ecore:VariableExp" name="aHTTPAction" referredVariable="/0/genActionParameters/aHTTPAction">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+          </argument>
+        </iterSet>
+        <each xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" , ">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </each>
+      </body>
+      <parameter name="aHTTPAction">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="genActionParametersForInput" visibility="Public">
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aFunctionParameter" referredVariable="/0/genActionParametersForInput/%/aFunctionParameter">
+              <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter/name"/>
+          </body>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aFunctionParameter" referredVariable="/0/genActionParametersForInput/%/aFunctionParameter">
+                <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter/bIsReturnParameter"/>
+            </source>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+          </ifExpr>
+        </body>
+        <loopVariable name="aFunctionParameter">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+        </loopVariable>
+        <iterSet xsi:type="mtl:QueryInvocation" eType="/3/Sequence(FunctionParameter)" definition="/0/getParameters">
+          <argument xsi:type="ocl.ecore:VariableExp" name="aHTTPAction" referredVariable="/0/genActionParametersForInput/aHTTPAction">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+          </argument>
+        </iterSet>
+        <before xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=", ">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </before>
+        <each xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" , ">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </each>
+      </body>
+      <parameter name="aHTTPAction">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="getReturnType" visibility="Public">
+      <parameter name="aHTTPAction">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+          <source xsi:type="ocl.ecore:IteratorExp" name="select" eType="/3/Sequence(FunctionParameter)">
+            <source xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/3/Sequence(FunctionParameter)">
+              <source xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(FunctionParameter)">
+                <source xsi:type="ocl.ecore:VariableExp" name="aHTTPAction" referredVariable="/0/getReturnType/aHTTPAction">
+                  <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction/HTTPActionHasParameter"/>
+              </source>
+              <body xsi:type="ocl.ecore:OperationCallExp" eType="/3/Set(FunctionParameter)">
+                <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/getReturnType/%/%/select/collect/temp3">
+                  <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+                </source>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsSet"/>
+              </body>
+              <iterator xsi:type="ocl.ecore:Variable" name="temp3">
+                <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+              </iterator>
+            </source>
+            <body xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="r" referredVariable="/0/getReturnType/%/%/select/r">
+                <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter/bIsReturnParameter"/>
+            </body>
+            <iterator xsi:type="ocl.ecore:Variable" name="r">
+              <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+            </iterator>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/first"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter/type"/>
+      </expression>
+      <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="getParameters" visibility="Public" type="/3/Sequence(FunctionParameter)">
+      <parameter name="aHTTPAction">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:IteratorExp" name="select" eType="/3/Sequence(FunctionParameter)">
+        <source xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/3/Sequence(FunctionParameter)">
+          <source xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(FunctionParameter)">
+            <source xsi:type="ocl.ecore:VariableExp" name="aHTTPAction" referredVariable="/0/getParameters/aHTTPAction">
+              <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction/HTTPActionHasParameter"/>
+          </source>
+          <body xsi:type="ocl.ecore:OperationCallExp" eType="/3/Set(FunctionParameter)">
+            <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/getParameters/select/collect/temp4">
+              <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+            </source>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsSet"/>
+          </body>
+          <iterator xsi:type="ocl.ecore:Variable" name="temp4">
+            <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+          </iterator>
+        </source>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="r" referredVariable="/0/getParameters/select/r">
+              <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter/bIsReturnParameter"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+        </body>
+        <iterator xsi:type="ocl.ecore:Variable" name="r">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+        </iterator>
+      </expression>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="ancestors">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:SequenceType" href="http://www.eclipse.org/acceleo/mtl/3.0/mtlnonstdlib.ecore#//Sequence(OclAny)"/>
+        <eParameters name="filter">
+          <eType xsi:type="ocl.ecore:TypeType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclType"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="genManagerControllerFileName">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/genManagerControllerFileName"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aCSharpResourceManagerController">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceManagerController"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="genActionParameters">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/genActionParameters"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aHTTPAction">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="genActionParametersForInput">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/genActionParametersForInput"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aHTTPAction">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getReturnType">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getReturnType"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aHTTPAction">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getParameters" eType="/3/Sequence(FunctionParameter)">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getParameters"/>
+        <eParameters name="aHTTPAction">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ServicePSM_CSharpResourceManagerController_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceManagerController"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ServicePSM_HTTPAction_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(FunctionParameter)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(OclAny)" instanceClassName="java.util.List">
+      <elementType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(RESTfulServicePSM)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(String)" instanceClassName="java.util.List">
+      <elementType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(FunctionParameter)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(FunctionParameter)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceManagerController"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceManagerController"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="RESTfulServicePSM">
+      <referredType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//RESTfulServicePSM"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceManagerController"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceManagerController"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceManagerController"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//CSharpResourceManagerController"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//FunctionParameter"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="platform:/plugin/PIM2DotNetPlugin/metamodels/PSMMetamodel.ecore#//HTTPAction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/genManagerControllerFileName">
+      <details key="start" value="132"/>
+      <details key="end" value="548"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/genManagerControllerFileName/%">
+      <details key="start" value="247"/>
+      <details key="end" value="248"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/genManagerControllerFileName/collect">
+      <details key="start" value="249"/>
+      <details key="end" value="315"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/genManagerControllerFileName/collect/%">
+      <details key="start" value="249"/>
+      <details key="end" value="310"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/genManagerControllerFileName/collect/%/aCSharpResourceManagerController">
+      <details key="start" value="249"/>
+      <details key="end" value="281"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/genManagerControllerFileName/collect/%/%">
+      <details key="start" value="292"/>
+      <details key="end" value="309"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/genManagerControllerFileName/collect/%.1">
+      <details key="start" value="311"/>
+      <details key="end" value="315"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/genManagerControllerFileName/collect/%.1/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/genManagerControllerFileName/collect/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/genManagerControllerFileName/%.1">
+      <details key="start" value="317"/>
+      <details key="end" value="318"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/genManagerControllerFileName/collect.1">
+      <details key="start" value="319"/>
+      <details key="end" value="385"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/genManagerControllerFileName/collect.1/%">
+      <details key="start" value="319"/>
+      <details key="end" value="380"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/genManagerControllerFileName/collect.1/%/aCSharpResourceManagerController">
+      <details key="start" value="319"/>
+      <details key="end" value="351"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/genManagerControllerFileName/collect.1/%/%">
+      <details key="start" value="362"/>
+      <details key="end" value="379"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/genManagerControllerFileName/collect.1/%.1">
+      <details key="start" value="381"/>
+      <details key="end" value="385"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/genManagerControllerFileName/collect.1/%.1/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/genManagerControllerFileName/collect.1/temp2">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/genManagerControllerFileName/%.2">
+      <details key="start" value="387"/>
+      <details key="end" value="400"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/genManagerControllerFileName/%.3">
+      <details key="start" value="401"/>
+      <details key="end" value="490"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/genManagerControllerFileName/%.3/%">
+      <details key="start" value="401"/>
+      <details key="end" value="485"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/genManagerControllerFileName/%.3/%/%">
+      <details key="start" value="401"/>
+      <details key="end" value="462"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/genManagerControllerFileName/%.3/%/%/aCSharpResourceManagerController">
+      <details key="start" value="401"/>
+      <details key="end" value="433"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/genManagerControllerFileName/%.4">
+      <details key="start" value="492"/>
+      <details key="end" value="493"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/genManagerControllerFileName/%.5">
+      <details key="start" value="494"/>
+      <details key="end" value="531"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/genManagerControllerFileName/%.5/aCSharpResourceManagerController">
+      <details key="start" value="494"/>
+      <details key="end" value="526"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/genManagerControllerFileName/%.6">
+      <details key="start" value="533"/>
+      <details key="end" value="536"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/genManagerControllerFileName/aCSharpResourceManagerController">
+      <details key="start" value="178"/>
+      <details key="end" value="244"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/genActionParameters">
+      <details key="start" value="550"/>
+      <details key="end" value="835"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/genActionParameters/%">
+      <details key="start" value="614"/>
+      <details key="end" value="823"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/genActionParameters/%/%">
+      <details key="start" value="708"/>
+      <details key="end" value="817"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/genActionParameters/%/%/%">
+      <details key="start" value="759"/>
+      <details key="end" value="782"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/genActionParameters/%/%/%/aFunctionParameter">
+      <details key="start" value="759"/>
+      <details key="end" value="777"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/genActionParameters/%/%/%.1">
+      <details key="start" value="784"/>
+      <details key="end" value="785"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/genActionParameters/%/%/%.2">
+      <details key="start" value="786"/>
+      <details key="end" value="809"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/genActionParameters/%/%/%.2/aFunctionParameter">
+      <details key="start" value="786"/>
+      <details key="end" value="804"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/genActionParameters/%/%/%.3">
+      <details key="start" value="712"/>
+      <details key="end" value="756"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/genActionParameters/%/%/%.3/%">
+      <details key="start" value="718"/>
+      <details key="end" value="755"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/genActionParameters/%/%/%.3/%/aFunctionParameter">
+      <details key="start" value="718"/>
+      <details key="end" value="736"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/genActionParameters/%/aFunctionParameter">
+      <details key="start" value="620"/>
+      <details key="end" value="658"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/genActionParameters/%/%.1">
+      <details key="start" value="661"/>
+      <details key="end" value="688"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/genActionParameters/%/%.1/aHTTPAction">
+      <details key="start" value="661"/>
+      <details key="end" value="672"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/genActionParameters/%/%.2">
+      <details key="start" value="700"/>
+      <details key="end" value="705"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/genActionParameters/aHTTPAction">
+      <details key="start" value="587"/>
+      <details key="end" value="611"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/genActionParametersForInput">
+      <details key="start" value="837"/>
+      <details key="end" value="1115"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/genActionParametersForInput/%">
+      <details key="start" value="909"/>
+      <details key="end" value="1103"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/genActionParametersForInput/%/%">
+      <details key="start" value="1016"/>
+      <details key="end" value="1097"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/genActionParametersForInput/%/%/%">
+      <details key="start" value="1067"/>
+      <details key="end" value="1090"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/genActionParametersForInput/%/%/%/aFunctionParameter">
+      <details key="start" value="1067"/>
+      <details key="end" value="1085"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/genActionParametersForInput/%/%/%.1">
+      <details key="start" value="1020"/>
+      <details key="end" value="1064"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/genActionParametersForInput/%/%/%.1/%">
+      <details key="start" value="1026"/>
+      <details key="end" value="1063"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/genActionParametersForInput/%/%/%.1/%/aFunctionParameter">
+      <details key="start" value="1026"/>
+      <details key="end" value="1044"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/genActionParametersForInput/%/aFunctionParameter">
+      <details key="start" value="915"/>
+      <details key="end" value="953"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/genActionParametersForInput/%/%.1">
+      <details key="start" value="956"/>
+      <details key="end" value="983"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/genActionParametersForInput/%/%.1/aHTTPAction">
+      <details key="start" value="956"/>
+      <details key="end" value="967"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/genActionParametersForInput/%/%.2">
+      <details key="start" value="992"/>
+      <details key="end" value="996"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/genActionParametersForInput/%/%.3">
+      <details key="start" value="1008"/>
+      <details key="end" value="1013"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/genActionParametersForInput/aHTTPAction">
+      <details key="start" value="882"/>
+      <details key="end" value="906"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/getReturnType">
+      <details key="start" value="1117"/>
+      <details key="end" value="1283"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/getReturnType/aHTTPAction">
+      <details key="start" value="1145"/>
+      <details key="end" value="1169"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/getReturnType/%">
+      <details key="start" value="1184"/>
+      <details key="end" value="1279"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/getReturnType/%/%">
+      <details key="start" value="1184"/>
+      <details key="end" value="1274"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/getReturnType/%/%/select">
+      <details key="start" value="1184"/>
+      <details key="end" value="1265"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/getReturnType/%/%/select/collect">
+      <details key="start" value="1184"/>
+      <details key="end" value="1229"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/getReturnType/%/%/select/collect/%">
+      <details key="start" value="1184"/>
+      <details key="end" value="1218"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/getReturnType/%/%/select/collect/%/aHTTPAction">
+      <details key="start" value="1184"/>
+      <details key="end" value="1195"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/getReturnType/%/%/select/collect/%.1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/getReturnType/%/%/select/collect/%.1/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/getReturnType/%/%/select/collect/temp3">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/getReturnType/%/%/select/%">
+      <details key="start" value="1244"/>
+      <details key="end" value="1264"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/getReturnType/%/%/select/%/r">
+      <details key="start" value="1244"/>
+      <details key="end" value="1245"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/getReturnType/%/%/select/r">
+      <details key="start" value="1240"/>
+      <details key="end" value="1241"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/getParameters">
+      <details key="start" value="1285"/>
+      <details key="end" value="1461"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/getParameters/aHTTPAction">
+      <details key="start" value="1313"/>
+      <details key="end" value="1337"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/getParameters/select">
+      <details key="start" value="1373"/>
+      <details key="end" value="1458"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/getParameters/select/collect">
+      <details key="start" value="1373"/>
+      <details key="end" value="1418"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/getParameters/select/collect/%">
+      <details key="start" value="1373"/>
+      <details key="end" value="1407"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/getParameters/select/collect/%/aHTTPAction">
+      <details key="start" value="1373"/>
+      <details key="end" value="1384"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/getParameters/select/collect/%.1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/getParameters/select/collect/%.1/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/getParameters/select/collect/temp4">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/getParameters/select/%">
+      <details key="start" value="1433"/>
+      <details key="end" value="1457"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/getParameters/select/%/%">
+      <details key="start" value="1437"/>
+      <details key="end" value="1457"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.82" references="/0/getParameters/select/%/%/r">
+      <details key="start" value="1437"/>
+      <details key="end" value="1438"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.83" references="/0/getParameters/select/r">
+      <details key="start" value="1429"/>
+      <details key="end" value="1430"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>
